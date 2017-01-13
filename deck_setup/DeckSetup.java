@@ -9,10 +9,10 @@ import rules.*;
 
 public class DeckSetup{
 
-  ArrayList<Suit> suits;
-  ArrayList<Value> values;
-  ArrayList<Value> rangedValues;
-  int numberOfDecks;
+  private ArrayList<Suit> suits;
+  private ArrayList<Value> values;
+  private ArrayList<Value> rangedValues;
+  private int numberOfDecks;
 
   public DeckSetup(int numberOfDecks){
     suits = new ArrayList<Suit>();
@@ -59,13 +59,22 @@ public class DeckSetup{
   public AbleToDeal buildDeck(){
     Dealable card;
     AbleToDeal deck = new Deck();
-    for(Suit suit : suits){
-      for(Value value : values){
-        card = new Card(suit, value);
-        deck.addCard(card);
+    for(int i = 0; i < numberOfDecks; i++){
+      for(Suit suit : suits){
+        for(Value value : values){
+          card = new Card(suit, value);
+          deck.addCard(card);
+        }
       }
     }
     return deck;
+  }
+
+  public static AbleToDeal standard52(){
+    DeckSetup setup = new DeckSetup(1);
+    setup.setSuits(true, true, true, true);
+    setup.setRange(1, 13);
+    return setup.buildDeck();
   }
 
 }

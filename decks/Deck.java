@@ -6,7 +6,7 @@ import players.*;
 
 public class Deck implements AbleToDeal{
 
-  ArrayList<Dealable> cards;
+  private ArrayList<Dealable> cards;
 
   public Deck(){
     cards = new ArrayList<Dealable>();
