@@ -22,4 +22,5 @@ public class PlayerTest{
     player.addCard(card);
     assertEquals(1, player.cardCount());
   }
+
 }

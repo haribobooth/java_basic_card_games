@@ -19,4 +19,9 @@ public class Player implements AbleToPlay{
     hand.add(card);
   }
 
+  public ArrayList<Dealable> getHand(){
+    return this.hand;
+  }
+
+
 }
