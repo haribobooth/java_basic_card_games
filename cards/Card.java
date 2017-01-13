@@ -7,7 +7,6 @@ public class Card implements Dealable{
 
   Suit suit;
   Value value;
-  int numericValue;
 
   public Card(Suit suit, Value value){
     this.suit = suit;
