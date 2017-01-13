@@ -9,7 +9,7 @@ public class Card implements Dealable{
   Value value;
   int numericValue;
 
-  public HighestCardCard(Suit suit, Value value){
+  public Card(Suit suit, Value value){
     this.suit = suit;
     this.value = value;
   }

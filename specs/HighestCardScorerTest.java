@@ -3,6 +3,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import cards.*;
 import enums.*;
+import scoring_strategies.*;
 
 public class HighestCardScorerTest{
 
@@ -13,13 +14,13 @@ public class HighestCardScorerTest{
   @Before
   public void before(){
     scorer = new HighestCardScorer();
-    card1 = new Card(Suit.ACE, Value.TWO);
-    card1 = new Card(Suit.ACE, Value.SEVEN);
+    card1 = new Card(Suit.SPADE, Value.TWO);
+    card2 = new Card(Suit.SPADE, Value.SEVEN);
   }
 
   @Test
   public void canCompareCards(){
-    scorer.compare(card1, card2);
+    assertEquals(card2, scorer.compare(card1, card2));
   }
 
 }

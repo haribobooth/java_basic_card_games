@@ -1,11 +1,12 @@
 package scoring_strategies;
 
 import java.util.*;
+import cards.*;
 import enums.*;
 
 public class HighestCardScorer implements Scoring{
 
-  HashMap valueMap = new HashMap<Value, Integer>();
+  HashMap<Value, Integer> valueMap = new HashMap<Value, Integer>();
 
   public HighestCardScorer(){
     valueMap.put(Value.ACE, 14);
@@ -24,8 +25,8 @@ public class HighestCardScorer implements Scoring{
   }
 
   public Dealable compare(Dealable card1, Dealable card2){
-    card1Score = valueMap.get(card1.getValue());
-    card2Score = valueMap.get(card2.getValue());
+    Integer card1Score = valueMap.get(card1.getValue());
+    Integer card2Score = valueMap.get(card2.getValue());
     return card1Score > card2Score ? card1 : card2;
   }
 
