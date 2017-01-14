@@ -23,4 +23,9 @@ public class PlayerTest{
     assertEquals(1, player.cardCount());
   }
 
+  @Test
+  public void startsWithNoCards(){
+    assertEquals(0, player.cardCount());
+  }
+
 }

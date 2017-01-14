@@ -47,4 +47,14 @@ public class HighestCardTest{
     assertEquals(1, player2.cardCount());
   }
 
+  @Test
+  public void canPlayTurnAndDecideWinner(){
+    rules.setup(player1);
+    rules.setup(player2);
+    rules.playTurn(player1);
+    rules.playTurn(player2);
+
+    assertEquals(player1, rules.getWinner());
+  }
+
 }
