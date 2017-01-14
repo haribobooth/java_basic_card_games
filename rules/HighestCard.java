@@ -19,6 +19,7 @@ public class HighestCard implements Winnable{
   public HighestCard(){
     this.scorer = new HighestCardScorer();
     this.deck = DeckSetup.standard52();
+    // when running tests please comment out deck.shuffle() in HighestCard.java
     // deck.shuffle();
     this.winningCard = new Card(Suit.SPADE, Value.JOKER);
   }
@@ -31,6 +32,7 @@ public class HighestCard implements Winnable{
     boolean isPlayerWinning;
     isPlayerWinning = checkWin(player.getHand());
     if(isPlayerWinning == true){winner = player;}
+    hasBeenWon = true;
   }
 
   public boolean checkWin(ArrayList<Dealable> cards){
@@ -45,6 +47,10 @@ public class HighestCard implements Winnable{
 
   public AbleToDeal getDeck(){
     return this.deck;
+  }
+
+  public boolean hasBeenWon(){
+    return this.hasBeenWon;
   }
 
 }

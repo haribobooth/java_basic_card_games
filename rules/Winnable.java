@@ -11,4 +11,5 @@ public interface Winnable{
   public boolean checkWin(ArrayList<Dealable> cards);
   public AbleToPlay getWinner();
   public AbleToDeal getDeck();
+  public boolean hasBeenWon();
 }

@@ -18,7 +18,6 @@ public class HighestCardTest{
     player1 = new Player();
     player2 = new Player();
     rules = new HighestCard();
-    // when running tests please comment out deck.shuffle() in HighestCard.java
   }
 
   @Test
