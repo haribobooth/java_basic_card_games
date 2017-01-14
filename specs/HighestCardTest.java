@@ -38,4 +38,13 @@ public class HighestCardTest{
     assertEquals(51, rules.getDeck().cardCount());
   }
 
+  @Test
+  public void canSetupMultiplePlayers(){
+    rules.setup(player1);
+    rules.setup(player2);
+    assertEquals(50, rules.getDeck().cardCount());
+    assertEquals(1, player1.cardCount());
+    assertEquals(1, player2.cardCount());
+  }
+
 }
