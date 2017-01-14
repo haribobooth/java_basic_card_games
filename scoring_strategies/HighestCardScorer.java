@@ -22,6 +22,7 @@ public class HighestCardScorer implements Scoring{
     valueMap.put(Value.JACK, 11);
     valueMap.put(Value.QUEEN, 12);
     valueMap.put(Value.KING, 13);
+    valueMap.put(Value.JOKER, 0);
   }
 
   public Dealable compare(Dealable card1, Dealable card2){

@@ -34,4 +34,8 @@ public class Deck implements AbleToDeal{
     cards.remove(cards.indexOf(dealtCard));
   }
 
+  public void shuffle(){
+    Collections.shuffle(cards);
+  }
+
 }

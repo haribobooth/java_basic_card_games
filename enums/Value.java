@@ -13,5 +13,6 @@ public enum Value{
   TEN,
   JACK,
   QUEEN,
-  KING
+  KING,
+  JOKER
 }

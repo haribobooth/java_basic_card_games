@@ -10,4 +10,5 @@ public interface AbleToDeal{
   public void addCard(Dealable card);
   public void removeCard(Dealable card);
   public void dealCard(AbleToPlay player);
+  public void shuffle();
 }
