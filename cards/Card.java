@@ -5,8 +5,8 @@ import enums.*;
 
 public class Card implements Dealable{
 
-  Suit suit;
-  Value value;
+  private Suit suit;
+  private Value value;
 
   public Card(Suit suit, Value value){
     this.suit = suit;

@@ -9,9 +9,11 @@ import rules.*;
 
 public class HighestCardTest{
 
+  
+
   @Test
   public void canTest(){
-    assertEquals(1, 1);
+
   }
 
 }

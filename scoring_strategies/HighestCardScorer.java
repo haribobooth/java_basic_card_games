@@ -6,7 +6,7 @@ import enums.*;
 
 public class HighestCardScorer implements Scoring{
 
-  HashMap<Value, Integer> valueMap = new HashMap<Value, Integer>();
+  private HashMap<Value, Integer> valueMap = new HashMap<Value, Integer>();
 
   public HighestCardScorer(){
     valueMap.put(Value.ACE, 14);

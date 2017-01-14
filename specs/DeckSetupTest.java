@@ -10,8 +10,8 @@ import deck_setup.*;
 
 public class DeckSetupTest{
 
-  private DeckSetup setup;
-  private AbleToDeal deck;
+  DeckSetup setup;
+  AbleToDeal deck;
 
   @Test
   public void canCreateStandard52(){

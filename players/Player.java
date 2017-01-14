@@ -5,7 +5,7 @@ import cards.*;
 
 public class Player implements AbleToPlay{
 
-  ArrayList<Dealable> hand;
+  private ArrayList<Dealable> hand;
 
   public Player(){
     hand = new ArrayList<Dealable>();
