@@ -14,14 +14,16 @@ public class HighestCard implements Winnable{
   private AbleToDeal deck;
   private boolean hasBeenWon;
   private AbleToPlay winner;
-  private Dealable winningCard;
+  private ArrayList<Dealable> winningCards;
 
   public HighestCard(){
     this.scorer = new HighestCardScorer();
     this.deck = DeckSetup.standard52();
+    winningCards = new ArrayList<Dealable>();
     // when running tests please comment out deck.shuffle() in HighestCard.java
     // deck.shuffle();
-    this.winningCard = new Card(Suit.SPADE, Value.JOKER);
+    Dealable startCard = new Card(Suit.SPADE, Value.JOKER);
+    winningCards.add(startCard);
   }
 
   public void setup(AbleToPlay player){
@@ -36,9 +38,8 @@ public class HighestCard implements Winnable{
   }
 
   public boolean checkWin(ArrayList<Dealable> cards){
-    Dealable card = cards.get(0);
-    winningCard = scorer.compare(card, winningCard);
-    return winningCard == card;
+    winningCards = scorer.compare(cards, winningCards);
+    return winningCards == cards;
   }
 
   public AbleToPlay getWinner(){

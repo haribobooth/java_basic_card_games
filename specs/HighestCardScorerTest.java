@@ -10,17 +10,22 @@ public class HighestCardScorerTest{
   Scoring scorer;
   Dealable card1;
   Dealable card2;
+  ArrayList<Dealable> hand1;
+  ArrayList<Dealable> hand2;
 
   @Before
   public void before(){
     scorer = new HighestCardScorer();
     card1 = new Card(Suit.SPADE, Value.TWO);
     card2 = new Card(Suit.SPADE, Value.SEVEN);
+    hand1 = new ArrayList<Dealable>();
+    hand2 = new ArrayList<Dealable>();
+    hand1.add(card1);
+    hand2.add(card2);
   }
 
   @Test
   public void canCompareCards(){
-    assertEquals(card2, scorer.compare(card1, card2));
+    assertEquals(hand2, scorer.compare(hand1, hand2));
   }
-
 }

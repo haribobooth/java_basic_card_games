@@ -29,8 +29,19 @@ public class BlackJackScorerTest{
     player1.addCard(card2);
     player2.addCard(card2);
     player2.addCard(card2);
-    ArrayList<Dealable> hand1 = player1.getDeck();
-    ArrayList<Dealable> hand2 = player2.getDeck();
+    ArrayList<Dealable> hand1 = player1.getHand();
+    ArrayList<Dealable> hand2 = player2.getHand();
     assertEquals(hand1, scorer.compare(hand1, hand2));
+  }
+
+  @Test
+  public void canCompareHandsWithOneBust(){
+    player1.addCard(card1);
+    player1.addCard(card1);
+    player2.addCard(card2);
+    player2.addCard(card2);
+    ArrayList<Dealable> hand1 = player1.getHand();
+    ArrayList<Dealable> hand2 = player2.getHand();
+    assertEquals(hand2, scorer.compare(hand1, hand2));
   }
 }

@@ -25,10 +25,12 @@ public class HighestCardScorer implements Scoring{
     valueMap.put(Value.JOKER, 0);
   }
 
-  public Dealable compare(Dealable card1, Dealable card2){
+  public ArrayList<Dealable> compare(ArrayList<Dealable> hand1, ArrayList<Dealable> hand2){
+    Dealable card1 = hand1.get(0);
+    Dealable card2 = hand2.get(0);
     Integer card1Score = valueMap.get(card1.getValue());
     Integer card2Score = valueMap.get(card2.getValue());
-    return card1Score > card2Score ? card1 : card2;
+    return card1Score > card2Score ? hand1 : hand2;
   }
 
 }
