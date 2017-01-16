@@ -4,8 +4,6 @@ import java.util.*;
 import cards.*;
 import enums.*;
 import decks.*;
-import players.*;
-import rules.*;
 
 public class DeckSetup{
 
